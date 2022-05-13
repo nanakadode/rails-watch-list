@@ -1,0 +1,21 @@
+
+<div class="banner" style='background-image: url(<%= image_path "banner.png" %>)'>
+<p>My list</p>
+<p>New list</p>
+</div>
+
+
+<h1>Save any kind of movies</h1>
+<p>classic</p>
+
+<%# <%= image_tag "logo.png", alt: "movie", width: 200 %>
+
+<h2>My lists</h2>
+<div>
+  <% @lists.each do |list| %>
+    <%= list.name %>
+    <%= link_to "click", list_path(list) %>
+  <% end %>
+</div>
+
+<%= link_to "Add", new_list_path %>
