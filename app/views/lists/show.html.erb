@@ -7,10 +7,19 @@
   <ul>
     <% @list.bookmarks.each do |bookmark| %>
     <li><%= bookmark.movie.title %></li>
+
+<%# <%= "https://source.unsplash.com/featured?#{}" %>
+
+    <%= image_tag bookmark.movie.poster_url, alttext: 'movie_image' %>
+
+
     <li><%= bookmark.comment %></li>
     <%= link_to bookmark_path(bookmark), method: :delete, data:{ confirm: "Remove#{bookmark.comment?}"} do %>
     <i class="fas fa-trash"></i>
+
+    <%# <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
+
     <% end %>
   </ul>
 </div>
