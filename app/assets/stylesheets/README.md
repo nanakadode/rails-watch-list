@@ -86,7 +86,7 @@ For every folder (**`components`**, **`pages`**), there is one `_index.scss` par
 
 **Example 2**: Let's say you add a new `_card.scss` file in **`components`** then modify `components/_index.scss` as:
 
-```scss
+```s
 // components/_index.scss
 @import "card";
 ```

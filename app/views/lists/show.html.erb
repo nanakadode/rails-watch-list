@@ -1,25 +1,20 @@
-<h1><%= @list.name %></h1>
-<%= link_to "back", lists_path %>
-
-<%= link_to "Add bookmark", new_list_bookmark_path(@list) %>
-
+<div class="m-5">
+  <h1><%= @list.name %></h1>
+  <%#= raise %>
+  <%= link_to "back", lists_path %><br>
+  <%= link_to "Add bookmark", new_list_bookmark_path(@list) %>
+</div>
 <div>
   <ul>
     <% @list.bookmarks.each do |bookmark| %>
-    <li><%= bookmark.movie.title %></li>
-
-<%# <%= "https://source.unsplash.com/featured?#{}" %>
-
-    <%= image_tag bookmark.movie.poster_url, alttext: 'movie_image' %>
-
-
-    <li><%= bookmark.comment %></li>
-    <%= link_to bookmark_path(bookmark), method: :delete, data:{ confirm: "Remove#{bookmark.comment?}"} do %>
-    <i class="fas fa-trash"></i>
-
-    <%# <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
-
+      <li><%= bookmark.movie.title %></li>
+      <%# <%= "https://source.unsplash.com/featured?#{}" %>
+      <%= image_tag bookmark.movie.poster_url, alttext: 'movie_image' %>
+      <li><%= bookmark.comment %></li>
+      <%= link_to bookmark_path(bookmark), method: :delete, data:{ confirm: "Remove#{bookmark.comment?}"} do %>
+        <i class="fas fa-trash"></i>
+        <%# <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
     <% end %>
   </ul>
 </div>

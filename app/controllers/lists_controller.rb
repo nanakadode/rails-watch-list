@@ -20,9 +20,15 @@ class ListsController < ApplicationController
       # look for view folder ,
       render :new
     end
-
-
   end
+
+  def delete
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to '/lists'
+  end
+
+  private
 
   def param_list
     params.require(:list).permit(:name, :photo)
