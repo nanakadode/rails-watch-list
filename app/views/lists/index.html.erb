@@ -6,7 +6,7 @@
 </div>
 <div class="cards m-5">
   <% @lists.each do |list| %>
-    <div class="card-category m-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://source.unsplash.com/featured?#{list.name}"%>)">
+    <div class="card-category m-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://source. .com/featured?#{list.name}"%>)">
       <%= list.name %>
       <%# blank link %>
       <%= link_to "", list_path(list), class: "cards-link" %>

@@ -45,11 +45,11 @@ Note that when you update the colors in `config/colors`, the (text) color of you
 
 ## Bootstrap JS
 
-Import bootstrap:
+Import :
 
 ```js
 // app/javascript/packs/application.js
-import 'bootstrap';
+import '';
 ```
 
 ## Adding new `.scss` files

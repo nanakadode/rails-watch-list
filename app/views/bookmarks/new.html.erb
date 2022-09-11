@@ -1,11 +1,13 @@
+<div class="m-5">
   <%= simple_form_for [ @list, @bookmark ] do |f| %>
-  <div class="container m-5">
-    <div class="m-3">
-      <%= f.association  :movie %>
+    <div class="container m-5">
+      <div class="m-3">
+        <%= f.association  :movie %>
+      </div>
+      <div class="m-3">
+        <%= f.input :comment %>
+      </div>
+      <%= f.submit "Add", class: "btn btn-primary mt-3" %>
     </div>
-    <div class="m-3">
-      <%= f.input :comment %>
-    </div>
-    <%= f.submit "Add", class: "btn btn-primary mt-3" %>
-  </div>
-<% end %>
+  <% end %>
+</div>
